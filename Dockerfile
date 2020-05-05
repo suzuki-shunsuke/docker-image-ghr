@@ -4,7 +4,7 @@ ARG GHR_VERSION=v0.12.0
 RUN wget https://github.com/tcnksm/ghr/releases/download/$GHR_VERSION/ghr_${GHR_VERSION}_linux_amd64.tar.gz
 RUN tar xvzf ghr_${GHR_VERSION}_linux_amd64.tar.gz
 
-FROM alpine:3.9
+FROM alpine:3.11
 ARG GHR_VERSION=v0.12.0
 COPY --from=go-build-env /go/ghr_${GHR_VERSION}_linux_amd64/ghr /usr/local/bin/
 RUN \
