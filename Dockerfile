@@ -1,4 +1,4 @@
-FROM golang:1.14.3 AS go-build-env
+FROM golang:1.14.4 AS go-build-env
 # download and unarchive ghr
 ARG GHR_VERSION=v0.12.0
 RUN wget https://github.com/tcnksm/ghr/releases/download/$GHR_VERSION/ghr_${GHR_VERSION}_linux_amd64.tar.gz
